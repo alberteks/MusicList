@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MusicList.Models.Song>
+
+<h1>My Songs</h1>
+<p style="text-align: center;">The best place to find and organize music you enjoy!</p>
+<div>
+    <span style="white-space: nowrap;">
+         <a class="btn btn-info" asp-action="Create">Add Song</a>
+         <form asp-controller="Songs" asp-action="Search" method="post">
+             <input name="query" type="search" placeholder="Search..."/>
+            <a asp-action="Search" type="submit"><img src="images/search_icon.png" style="width: 25px; height: auto;" /></a>
+         </form>
+    </span>
+</div>
+
+@if(Model.Count() > 0){
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Artist</th>
+            <th>Genre</th>
+            <th>Rating</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var song in Model){
+            <tr>
+                <td>@song.Name</td>
+                <td>@song.Artist</td>
+                <td>@song.Genre</td>
+                <td>@song.Rating</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@song.Id" class="btn btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@song.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+}
+else{
+    <p>No items currently added!</p>
+}

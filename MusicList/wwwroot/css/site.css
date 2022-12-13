@@ -1,0 +1,101 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: url(/images/papyrus-dark.webp) repeat 0 0;
+}
+
+#maintitle {
+    color: white;
+    text-shadow: 1px 1px 1px honeydew;
+}
+
+.title {
+    text-align: center;
+}
+
+.description {
+    font-family: "Microsoft Sans Serif";
+    padding: 10px 2px 2px 4px;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 12px;
+}
+
+#home{
+    color: white;
+    font-family: 'Brush Script MT';
+    font-size:21px;
+}
+
+.logo {
+    height: 27px;
+    width: auto;
+}
+
+h1{
+    font-family: Arial; 
+    color: white;
+    text-align: center;
+}
+
+tr, th,td {
+    border: solid 2px white;
+    padding: 0.5rem;
+    color: white;
+}
+
+thead {
+    background-color: blueviolet;
+}
+
+table{
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:hover {
+    background-color: #006600;
+}
+
+form{
+    text-align: center;
+}
+
+.form-control{
+    background-color: grey;
+    width: 400px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label{
+    color: white;
+}
+
+.btn{
+    margin-top: 10px;
+}
+
+p{
+    color: white;
+}
+
+.alert-warning{
+    color: indianred;
+}

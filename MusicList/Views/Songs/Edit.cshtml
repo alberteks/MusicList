@@ -1,0 +1,34 @@
+﻿@model MusicList.Models.Song
+
+<h1>Edit Song</h1>
+
+<form method="post">
+    <div class="form-group row">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control"/>
+    </div>
+    <div class="form-group row">
+        <label>Artist</label>
+        <input asp-for="Artist" class="form-control" />
+    </div>
+    <div class="form-group row">
+        <label>Genre</label>
+        <input asp-for="Genre" class="form-control" />
+    </div>
+    <div class="form-group row">
+        <label>Rating</label>
+        <select asp-for="Rating" class="form-control">
+            <option>1</option>
+            <option>1.5</option>
+            <option>2</option>
+            <option>2.5</option>
+            <option>3</option>
+            <option>3.5</option>
+            <option>4</option>
+            <option>4.5</option>
+            <option>5</option>
+        </select>
+    </div>
+    <input type="submit" value="Update" class="btn btn-success"/>
+    <a class="btn btn-info" asp-action="Index">Back to Home</a>
+</form>

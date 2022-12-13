@@ -1,0 +1,38 @@
+﻿@model MusicList.Models.Song
+
+<h1>Add A New Song</h1>
+
+<form method="post" onsubmit="validate()">
+    <div class="form-group row">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" id="name"/>
+        <span id="error_name" class="text-danger"></span>
+    </div>
+    <div class="form-group row">
+        <label>Artist</label>
+        <input asp-for="Artist" class="form-control" id="artist"/>
+        <span id="error_artist" class="text-danger"></span>
+    </div>
+    <div class="form-group row">
+        <label>Genre</label>
+        <input asp-for="Genre" class="form-control" id="genre"/>
+        <span id="error_genre" class="text-danger"></span>
+    </div>
+    <div class="form-group row">
+        <label>Rating</label>
+        <select asp-for="Rating" class="form-control" id="rating">
+            <option>1</option>
+            <option>1.5</option>
+            <option>2</option>
+            <option>2.5</option>
+            <option>3</option>
+            <option>3.5</option>
+            <option>4</option>
+            <option>4.5</option>
+            <option>5</option>
+        </select>
+    </div>
+    <span id="error_rating" class="text-danger"></span>
+    <input type="submit" value="Submit" class="btn btn-success" onsubmit="return validate()"/>
+    <a class="btn btn-info">Back to Home</a>
+</form>
